@@ -66,7 +66,17 @@ body {
   padding-top: 1rem;
 }
 
+h1 {
+  margin-bottom: 2rem;
+}
+
 .container {
   padding: 2rem;
+  width: 60%;
+  /* display: flex;
+  align-items: center;
+  flex-direction: column; */
+  
+  margin:0 auto;
 }
 </style>
