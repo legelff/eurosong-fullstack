@@ -21,7 +21,7 @@
                 </td>
 
                 <td>
-                    {{item.artist_name}}
+                    {{item.name}}
                 </td>
             </tbody>
         </table>
@@ -33,28 +33,21 @@
         name: "PageArtists",
 
         mounted() {
-            fetch("http://localhost:3000/artists")
+            fetch("http://localhost:3000/artists", {
+                method: "GET"
+            })
                 .then((data) => {
                     return data.json();
                 })
                 .then((artists) => {
-                    console.log(artists);                    
+                    // console.log(artists);
+                    this.artists = artists            
                 })
         },
 
         data() {
             return {
-                artists: [
-                    // {
-                    //     artist_id: 1,
-                    //     artist_name: "ABBA"
-                    // },
-    
-                    // {
-                    //     artist_id: 2,
-                    //     artist_name: "Celine Dion"
-                    // }
-                ]
+                artists: []
             }
         }
     }
