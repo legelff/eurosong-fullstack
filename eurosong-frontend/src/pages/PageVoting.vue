@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        Voting
+        <h1>
+            Eurosong Voting
+        </h1>
     </div>
 </template>
 

@@ -3,6 +3,7 @@
     <NavigationComponent @setActivePage="setActivePage"/>
     <PageHome v-if="activePage === `Home`"/>
     <PageArtists v-if="activePage === `Artists`"/>
+    <PageSongs v-if="activePage === `Songs`"/>
     <PageRanking v-if="activePage === `Ranking`"/>
     <PageVoting v-if="activePage === `Voting`"/>
   </div>
@@ -13,6 +14,7 @@ import NavigationComponent from './components/NavigationComponent.vue'
 import PageArtists from './pages/PageArtists.vue';
 import PageHome from './pages/PageHome.vue';
 import PageRanking from './pages/PageRanking.vue';
+import PageSongs from './pages/PageSongs.vue';
 import PageVoting from './pages/PageVoting.vue';
 
 export default {
@@ -29,7 +31,8 @@ export default {
     PageHome,
     PageArtists,
     PageRanking,
-    PageVoting
+    PageVoting,
+    PageSongs
   },
 
   methods: {

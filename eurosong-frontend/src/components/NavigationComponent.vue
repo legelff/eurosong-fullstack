@@ -17,7 +17,7 @@
 
         data() {
             return {
-                navItems: ["Home", "Artists", "Ranking", "Voting"]
+                navItems: ["Home", "Artists", "Songs", "Ranking", "Voting"]
             }
         },
 

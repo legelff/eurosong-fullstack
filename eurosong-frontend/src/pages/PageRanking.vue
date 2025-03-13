@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        Ranking
+        <h1>
+            Eurosong Ranking
+        </h1>
     </div>
 </template>
 

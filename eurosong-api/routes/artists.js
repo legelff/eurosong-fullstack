@@ -1,40 +1,37 @@
-const express = require('express');
-const { PrismaClient } = require("@prisma/client");
+var express = require('express');
+var router = express.Router();
 
-const router = express.Router();
-
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-/* GET */
-router.get('/', async (req, res, next) => {
+/* GET users listing. */
+router.get('/', async function(req, res, next) {
   const data = await prisma.artists.findMany();
-
   res.json(data);
 });
 
-// req comes from frontend
 router.post('/', async (req, res, next) => {
-  const checkArtists = await prisma.artists.findMany({
+  const checkArtist = await prisma.artists.findMany({
     where: {
       name: req.body.name
     }
-  })
+  });
 
-  if (checkArtists.length > 0) {
+  if (checkArtist.length > 0) {
     res.json({
-      "message": "artist duplicate found!"
-    })
-  }
+      "message": "Already an artist with the same name"
+    });
+  } else {
 
-  else {
     const newArtist = await prisma.artists.create({
-      data: {
+      data: { 
         name: req.body.name
       }
-    })
+    });
+  
+    res.json(newArtist);
   }
 
-  res.json(newArtist);
 })
 
 module.exports = router;
