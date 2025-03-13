@@ -47,14 +47,13 @@
                 .then((data) => {
                     return data.json();
                 })
-                .then((songs) => {
-                    this.songs = songs;
+                .then((_songs) => {
+                    this.songs = _songs;
                 })
         },
 
         data() {
             return {
-                artists: [],
                 songs: []
             }
         }

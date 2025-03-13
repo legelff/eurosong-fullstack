@@ -8,7 +8,17 @@
 
 <script>
     export default {
-        name: "PageRanking"
+        name: "PageRanking",
+
+        mounted() {
+            
+        },
+
+        data() {
+            return {
+                rankings: []
+            }
+        }
     }
 </script>
 

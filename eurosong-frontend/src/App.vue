@@ -76,9 +76,9 @@ h1 {
 .container {
   padding: 2rem;
   width: 60%;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  flex-direction: column; */
+  flex-direction: column;
   
   margin:0 auto;
 }
