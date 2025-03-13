@@ -63,6 +63,7 @@ table {
     /* border: 1px solid rgba(255,255,255, 0.2); */
     color: #fff;
     margin: 0 auto;
+    /* border-radius: 10px; */
 }
 
 th, td {
