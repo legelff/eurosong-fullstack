@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      activePage: "Home"
+      activePage: "Voting"
     }
   },
 
