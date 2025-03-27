@@ -5,7 +5,7 @@
     <PageArtists v-if="activePage === `Artists`"/>
     <PageSongs v-if="activePage === `Songs`"/>
     <PageRanking v-if="activePage === `Ranking`"/>
-    <PageVoting v-if="activePage === `Voting`"/>
+    <PageVoting v-if="activePage === `Voting`" @setActivePage="setActivePage"/>
   </div>
 </template>
 
