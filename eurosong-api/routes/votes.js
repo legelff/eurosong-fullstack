@@ -6,6 +6,7 @@ const prisma = new PrismaClient();
 
 /* GET users listing. */
 router.post('/', async (req, res, next) => {
+  console.log(req.body); 
 
   const newVote = await prisma.votes.create({
     data: { 

@@ -51,22 +51,22 @@
                     },
                     body: JSON.stringify({
                         points: this.buttons[index].amountOfPoints,
-                        voter_id: 10,
+                        voter_id: 3,
                         song_id: this.songs[this.currSong].song_id,
                     })
                 })
                 .then((data) => {
                     return data.json();
                 })
-                .then(() => {
-                    // console.log(data);
+                .then((data) => {
+                    console.log(data);
                     this.buttons[index].disabled = true;
 
                     let amountOfButtonsEnabled = this.buttons.filter((button) => button.disabled === false).length;
 
                     if (amountOfButtonsEnabled === 0) {
                         // console.log("Redirect to ranking")
-                        this.$emit("setActivePage", "ranking");
+                        this.$emit("setActivePage", "Ranking");
                     }
                 }) 
             },

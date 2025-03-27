@@ -63,15 +63,15 @@
                         name: this.newArtist
                     })
                 })
-                    .then((data) => {
-                        return  data.json();
+                .then((data) => {
+                    return  data.json();
+                })
+                .then((_newArtist) => {
+                    this.artists.push({
+                        artist_id: _newArtist.artist_id,
+                        name: _newArtist.name
                     })
-                    .then((_newArtist) => {
-                        this.artists.push({
-                            artist_id: _newArtist.artist_id,
-                            name: _newArtist.name
-                        })
-                    }) 
+                }) 
             }
         },
 
